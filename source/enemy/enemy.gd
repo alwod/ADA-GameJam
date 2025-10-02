@@ -12,6 +12,5 @@ func _physics_process(delta: float) -> void:
 		return
 		
 	var direction = global_position.direction_to(player.global_position)
-	print("Direction to player:", direction)
 	velocity = direction * movement_speed
 	move_and_slide()
