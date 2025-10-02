@@ -489,13 +489,13 @@ sources/0 = SubResource("TileSetAtlasSource_jirdo")
 
 [node name="Level1" type="Node"]
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
-position = Vector2(-21, 18)
-tile_map_data = PackedByteArray("AAD9/wAAAAABAAMAAAD+/wAAAAACAAMAAAD//wAAAAACAAMAAAAAAAAAAAACAAMAAAABAAAAAAAFAAQAAAACAAAAAAAAAAMAAAADAAAAAAAAAAMAAAACAP//AAACAAMAAAABAP//AAABAAMAAAADAP//AAADAAMAAAAEAP7/AAADAAcAAAAEAP//AAADAAgAAAAFAP7/AAAEAAcAAAAFAP//AAAEAAgAAAAGAP7/AAADAAcAAAAGAP//AAADAAgAAAAHAP7/AAAEAAcAAAAHAP//AAAEAAgAAAAIAP3/AAAFAAoAAAAJAP3/AAAGAAoAAAALAP3/AAAFAAoAAAAMAP3/AAAGAAoAAAAJAPz/AAAMAAgAAAA=")
-tile_set = SubResource("TileSet_bt44k")
-
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_jirdo")]
 position = Vector2(-62, -48)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="CharacterBody2D"]
+position = Vector2(41, 66)
+tile_map_data = PackedByteArray("AAD9/wAAAAABAAMAAAD+/wAAAAACAAMAAAD//wAAAAACAAMAAAAAAAAAAAACAAMAAAABAAAAAAAFAAQAAAACAAAAAAAAAAMAAAADAAAAAAAAAAMAAAACAP//AAACAAMAAAABAP//AAABAAMAAAADAP//AAADAAMAAAAEAP7/AAADAAcAAAAEAP//AAADAAgAAAAFAP7/AAAEAAcAAAAFAP//AAAEAAgAAAAGAP7/AAADAAcAAAAGAP//AAADAAgAAAAHAP7/AAAEAAcAAAAHAP//AAAEAAgAAAAIAP3/AAAFAAoAAAAJAP3/AAAGAAoAAAALAP3/AAAFAAoAAAAMAP3/AAAGAAoAAAAJAPz/AAAMAAgAAAA=")
+tile_set = SubResource("TileSet_bt44k")
 
 [node name="Coin" parent="." instance=ExtResource("3_bt44k")]
 position = Vector2(88, -88)
@@ -517,3 +517,9 @@ position = Vector2(483, -212)
 
 [node name="Enemy" parent="." instance=ExtResource("4_kx6l7")]
 position = Vector2(-219, -2)
+
+[node name="Coin7" parent="." instance=ExtResource("3_bt44k")]
+position = Vector2(-66, -25)
+
+[node name="Coin8" parent="." instance=ExtResource("3_bt44k")]
+position = Vector2(155, -81)
