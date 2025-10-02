@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://chfevr6ydp1ni"]
+[gd_scene load_steps=5 format=3 uid="uid://chfevr6ydp1ni"]
 
 [ext_resource type="Script" uid="uid://cgqfm5uf05sn2" path="res://player/player_v3.gd" id="1_4gc3r"]
 [ext_resource type="Texture2D" uid="uid://b0ewa2a4yfty" path="res://icon.svg" id="1_7tpc1"]
+[ext_resource type="PackedScene" uid="uid://betx2fwdu5xvn" path="res://hud.tscn" id="3_8mfy8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4gc3r"]
 
@@ -15,3 +16,7 @@ shape = SubResource("CapsuleShape2D_4gc3r")
 position = Vector2(0.5, 0)
 scale = Vector2(0.14843749, 0.14062499)
 texture = ExtResource("1_7tpc1")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="HUD" parent="." instance=ExtResource("3_8mfy8")]
