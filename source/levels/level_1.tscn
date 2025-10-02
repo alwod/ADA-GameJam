@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://c8btxc1wjq1pm"]
+[gd_scene load_steps=7 format=4 uid="uid://c8btxc1wjq1pm"]
 
 [ext_resource type="Texture2D" uid="uid://cajwu6wl5y1k7" path="res://kenney_abstract-platformer/Tilesheet/tilesheet_complete.png" id="1_vn7o3"]
 [ext_resource type="PackedScene" uid="uid://chfevr6ydp1ni" path="res://player/player_v3.tscn" id="2_jirdo"]
-[ext_resource type="PackedScene" uid="uid://bsk54chxx04cd" path="res://coin.tscn" id="3_bt44k"]
+[ext_resource type="PackedScene" uid="uid://bsk54chxx04cd" path="res://coin/coin.tscn" id="3_bt44k"]
+[ext_resource type="PackedScene" uid="uid://cdabiqaju87as" path="res://enemy/enemy.tscn" id="4_kx6l7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jirdo"]
 texture = ExtResource("1_vn7o3")
@@ -513,3 +514,6 @@ position = Vector2(378, -114)
 
 [node name="Coin6" parent="." instance=ExtResource("3_bt44k")]
 position = Vector2(483, -212)
+
+[node name="Enemy" parent="." instance=ExtResource("4_kx6l7")]
+position = Vector2(-219, -2)
