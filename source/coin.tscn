@@ -8,7 +8,7 @@ radius = 15.35
 
 [node name="Coin" type="Node2D"]
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." groups=["collectible"]]
 script = ExtResource("1_0t63x")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]

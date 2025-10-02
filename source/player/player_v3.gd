@@ -1,6 +1,7 @@
 extends CharacterBody2D
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 
+var score = 0
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -300.0

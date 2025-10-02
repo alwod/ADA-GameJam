@@ -1,5 +1,7 @@
 extends Area2D
 
+
 func _on_body_entered(body: Node2D) -> void:
-		print("Coin got!")
-		hide()
+	GameManager.coins += 1
+	print(GameManager.coins)
+	
