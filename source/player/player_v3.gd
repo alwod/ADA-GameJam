@@ -27,3 +27,10 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		
+		if collision.get_collider().name == "CharacterBody2D":
+			print("Got here!")
+			GameManager.game_over = true
+			queue_free()
