@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://qe8vqtmg2wby" path="res://kenney_abstract-platformer/PNG/Items/yellowJewel.png" id="1_jd61m"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pdbca"]
-radius = 17.55
+radius = 15.75
 
 [node name="Coin" type="Node2D"]
 
