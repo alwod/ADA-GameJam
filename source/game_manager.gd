@@ -15,7 +15,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if (game_over || game_win) && test:
+	if (game_over or game_win) and test:
 		test = false
 		get_tree().change_scene_to_file("res://start_screen.tscn")
 	
