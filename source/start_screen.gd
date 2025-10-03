@@ -42,4 +42,4 @@ func check_game_status():
 		else:
 			message_label.text = "You won! Score: " + str(GameManager.coins)
 	else:
-		message_label.text = "Aqua Assets"
+		message_label.text = "AQUANTING"

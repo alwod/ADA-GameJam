@@ -32,7 +32,7 @@ metadata/_edit_group_ = true
 [node name="MessageLabel" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 76
-text = "Aqua Assets"
+text = "AQUANTING"
 horizontal_alignment = 1
 
 [node name="StartButton" type="Button" parent="VBoxContainer"]
@@ -49,6 +49,15 @@ text = "Customise Character"
 layout_mode = 2
 theme_override_font_sizes/font_size = 41
 text = "Exit"
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Credits" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Programming: Mikha
+Game Design: Rachel, Karla, Lei"
+horizontal_alignment = 1
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
