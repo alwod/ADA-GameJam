@@ -24,3 +24,9 @@ texture = ExtResource("2_8mfy8")
 zoom = Vector2(2, 2)
 
 [node name="HUD" parent="." instance=ExtResource("3_8mfy8")]
+
+[node name="CoyoteTimer" type="Timer" parent="."]
+wait_time = 0.05
+one_shot = true
+
+[connection signal="timeout" from="CoyoteTimer" to="." method="_on_coyote_timer_timeout"]
