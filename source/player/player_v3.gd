@@ -34,3 +34,4 @@ func _physics_process(delta: float) -> void:
 			print("Got here!")
 			GameManager.game_over = true
 			queue_free()
+			get_tree().change_scene_to_file("res://start_screen.tscn")
