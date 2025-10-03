@@ -1,22 +1,32 @@
 [gd_scene load_steps=5 format=3 uid="uid://chfevr6ydp1ni"]
 
 [ext_resource type="Script" uid="uid://cgqfm5uf05sn2" path="res://player/player_v3.gd" id="1_4gc3r"]
-[ext_resource type="Texture2D" uid="uid://b0ewa2a4yfty" path="res://icon.svg" id="1_7tpc1"]
+[ext_resource type="Texture2D" uid="uid://cbep5cofke1y1" path="res://player/player_art.png" id="2_8mfy8"]
 [ext_resource type="PackedScene" uid="uid://betx2fwdu5xvn" path="res://hud.tscn" id="3_8mfy8"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4gc3r"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5at1m"]
+size = Vector2(26.225, 21.32)
 
 [node name="CharacterBody2D" type="CharacterBody2D" groups=["Player"]]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_4gc3r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_4gc3r")
+shape = SubResource("RectangleShape2D_5at1m")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0.5, 0)
-scale = Vector2(0.14843749, 0.14062499)
-texture = ExtResource("1_7tpc1")
+position = Vector2(0, 7.1054274e-15)
+scale = Vector2(0.06162979, 0.061764706)
+texture = ExtResource("2_8mfy8")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
 
 [node name="HUD" parent="." instance=ExtResource("3_8mfy8")]
+
+[node name="CoyoteTimer" type="Timer" parent="."]
+wait_time = 0.05
+one_shot = true
+
+[connection signal="timeout" from="CoyoteTimer" to="." method="_on_coyote_timer_timeout"]
