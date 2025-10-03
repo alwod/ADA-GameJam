@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://bguejp0j2umuo"]
+
+[node name="StartScreen" type="CanvasLayer"]

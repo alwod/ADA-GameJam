@@ -10,3 +10,11 @@ offset_right = 40.0
 offset_bottom = 23.0
 text = "0"
 horizontal_alignment = 1
+
+[node name="GameOver" type="Label" parent="."]
+offset_left = 413.0
+offset_top = 282.0
+offset_right = 756.0
+offset_bottom = 379.0
+theme_override_font_sizes/font_size = 71
+text = "YOU LOST"
