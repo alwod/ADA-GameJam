@@ -12,11 +12,12 @@ func _ready() -> void:
 
 
 func _on_start_button_pressed() -> void:
+	GameManager.game_over = false
 	get_tree().change_scene_to_file("res://levels/level_1.tscn")
 
 
 func _on_customise_button_pressed() -> void:
-	message_label.text = "Sorry, we havn't done that yet :("
+	message_label.text = "That's unfinished sorry :("
 	timer.start()
 
 

@@ -31,7 +31,7 @@ func _physics_process(delta: float) -> void:
 		var collision = get_slide_collision(i)
 		
 		if collision.get_collider().name == "CharacterBody2D":
-			print("Got here!")
-			GameManager.game_over = true
-			queue_free()
-			get_tree().change_scene_to_file("res://start_screen.tscn")
+			print("Collision with enemy")
+			if !GameManager.game_over:
+				GameManager.game_over = true
+				get_tree().change_scene_to_file("res://start_screen.tscn")
