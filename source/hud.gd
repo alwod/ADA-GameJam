@@ -10,4 +10,4 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	score_label.text = str(GameManager.coins)
+	score_label.text = "Coins: " + str(GameManager.coins) + "/13"

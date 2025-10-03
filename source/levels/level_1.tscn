@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=4 uid="uid://c8btxc1wjq1pm"]
+[gd_scene load_steps=10 format=4 uid="uid://c8btxc1wjq1pm"]
 
+[ext_resource type="Texture2D" uid="uid://d1hl2nvw1ykdd" path="res://background.jpg" id="1_btoec"]
 [ext_resource type="Texture2D" uid="uid://cajwu6wl5y1k7" path="res://kenney_abstract-platformer/Tilesheet/tilesheet_complete.png" id="1_vn7o3"]
 [ext_resource type="PackedScene" uid="uid://chfevr6ydp1ni" path="res://player/player_v3.tscn" id="2_jirdo"]
 [ext_resource type="PackedScene" uid="uid://bsk54chxx04cd" path="res://coin/coin.tscn" id="3_bt44k"]
 [ext_resource type="PackedScene" uid="uid://cdabiqaju87as" path="res://enemy/enemy.tscn" id="4_kx6l7"]
 [ext_resource type="PackedScene" uid="uid://dxntw7txuyg3s" path="res://levels/level_end_point.tscn" id="5_n46q3"]
+[ext_resource type="PackedScene" uid="uid://bpi63omoeoavu" path="res://levels/world_border.tscn" id="7_gwceb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jirdo"]
 texture = ExtResource("1_vn7o3")
@@ -490,34 +492,66 @@ sources/0 = SubResource("TileSetAtlasSource_jirdo")
 
 [node name="Level1" type="Node"]
 
+[node name="Background" type="TextureRect" parent="."]
+offset_left = -563.0
+offset_top = -725.0
+offset_right = 1357.0
+offset_bottom = 355.0
+texture = ExtResource("1_btoec")
+
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-21, 18)
-tile_map_data = PackedByteArray("AAD9/wAAAAABAAMAAAD+/wAAAAACAAMAAAD//wAAAAACAAMAAAAAAAAAAAACAAMAAAABAAAAAAAFAAQAAAACAAAAAAAAAAMAAAADAAAAAAAAAAMAAAACAP//AAACAAMAAAABAP//AAABAAMAAAADAP//AAADAAMAAAAEAP7/AAADAAcAAAAEAP//AAADAAgAAAAFAP7/AAAEAAcAAAAFAP//AAAEAAgAAAAGAP7/AAADAAcAAAAGAP//AAADAAgAAAAHAP7/AAAEAAcAAAAHAP//AAAEAAgAAAAIAP3/AAAFAAoAAAAJAP3/AAAGAAoAAAALAP3/AAAFAAoAAAAMAP3/AAAGAAoAAAA=")
+tile_map_data = PackedByteArray("AAD+/wAAAAAFAAMAAAD//wAAAAAGAAMAAAAAAAAAAAAGAAMAAAABAAAAAAAHAAMAAAADAP//AAAIAAMAAAAGAAAAAAAIAAMAAAAEAAEAAAAIAAMAAAABAP7/AAAIAAMAAAAIAP//AAAIAAMAAAAGAP7/AAAIAAMAAAAKAP7/AAABAAMAAAALAP7/AAAEAAQAAAAMAP//AAAEAAQAAAALAP//AAAEAAUAAAAKAP//AAAAAAMAAAAKAAAAAAAAAAMAAAALAAAAAAAAAAMAAAAMAAAAAAAEAAUAAAANAAAAAAADAAMAAAD9//3/AAAHAAQAAAD+//3/AAAIAAQAAAADAPv/AAACAAMAAAAEAPv/AAACAAMAAAAFAPv/AAACAAMAAAAGAPv/AAACAAMAAAAHAPv/AAAIAAQAAAACAPv/AAABAAQAAAA=")
 tile_set = SubResource("TileSet_bt44k")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_jirdo")]
 position = Vector2(-62, -48)
 
 [node name="Coin" parent="." instance=ExtResource("3_bt44k")]
-position = Vector2(88, -88)
+position = Vector2(79, -129)
 
 [node name="Coin2" parent="." instance=ExtResource("3_bt44k")]
-position = Vector2(219, -118)
+position = Vector2(273, 44)
 
 [node name="Coin3" parent="." instance=ExtResource("3_bt44k")]
-position = Vector2(-19, -57)
+position = Vector2(75, -36)
 
 [node name="Coin4" parent="." instance=ExtResource("3_bt44k")]
-position = Vector2(-174, -36)
+position = Vector2(756, -166)
 
 [node name="Coin5" parent="." instance=ExtResource("3_bt44k")]
-position = Vector2(378, -114)
+position = Vector2(391, -130)
 
 [node name="Coin6" parent="." instance=ExtResource("3_bt44k")]
-position = Vector2(483, -212)
+position = Vector2(525, -85)
 
 [node name="Enemy" parent="." instance=ExtResource("4_kx6l7")]
-position = Vector2(-219, -2)
+position = Vector2(-268, -45)
 
 [node name="LevelEndPoint" parent="." instance=ExtResource("5_n46q3")]
-position = Vector2(758, -185)
+position = Vector2(847, 5)
+
+[node name="WorldBorder" parent="." instance=ExtResource("7_gwceb")]
+position = Vector2(380.99997, 125)
+scale = Vector2(90.15, 1)
+
+[node name="Coin7" parent="." instance=ExtResource("3_bt44k")]
+position = Vector2(149, -332)
+
+[node name="Coin8" parent="." instance=ExtResource("3_bt44k")]
+position = Vector2(195, -387)
+
+[node name="Coin9" parent="." instance=ExtResource("3_bt44k")]
+position = Vector2(242, -334)
+
+[node name="Coin10" parent="." instance=ExtResource("3_bt44k")]
+position = Vector2(301, -387)
+
+[node name="Coin11" parent="." instance=ExtResource("3_bt44k")]
+position = Vector2(364, -333)
+
+[node name="Coin12" parent="." instance=ExtResource("3_bt44k")]
+position = Vector2(423, -389)
+
+[node name="Coin13" parent="." instance=ExtResource("3_bt44k")]
+position = Vector2(456, -327)
